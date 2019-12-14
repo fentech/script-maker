@@ -6,7 +6,8 @@
         "url": "https://github.com/fentech/script-maker.git"
     },
     "description": "A library to help developers create their own CLI commands.",
-    "main": "index.js",
+    "main": "lib/index.js",
+    "types": "lib/index.d.ts",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
