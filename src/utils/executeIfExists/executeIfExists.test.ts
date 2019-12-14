@@ -1,26 +1,26 @@
-import executeIfExists from "./executeIfExists";
-import fs from "fs";
+import executeIfExists from './executeIfExists';
+import fs from 'fs';
 
-jest.mock("fs");
+jest.mock('fs');
 
-describe("executeIfExists()", (): void => {
-  it("should execute callback if asset exists", (): void => {
-    (fs.existsSync as jest.Mock).mockReturnValue(true);
+describe('executeIfExists()', (): void => {
+    it('should execute callback if asset exists', (): void => {
+        (fs.existsSync as jest.Mock).mockReturnValue(true);
 
-    const testCallback = jest.fn();
+        const testCallback = jest.fn();
 
-    executeIfExists("test.ts", testCallback);
+        executeIfExists('test.ts', testCallback);
 
-    expect(testCallback).toBeCalledTimes(1);
-  });
+        expect(testCallback).toBeCalledTimes(1);
+    });
 
-  it("should not execute callback if asset doesn't exist", (): void => {
-    (fs.existsSync as jest.Mock).mockReturnValue(false);
+    it("should not execute callback if asset doesn't exist", (): void => {
+        (fs.existsSync as jest.Mock).mockReturnValue(false);
 
-    const testCallback = jest.fn();
+        const testCallback = jest.fn();
 
-    executeIfExists("test.ts", testCallback);
+        executeIfExists('test.ts', testCallback);
 
-    expect(testCallback).not.toBeCalled();
-  });
+        expect(testCallback).not.toBeCalled();
+    });
 });
