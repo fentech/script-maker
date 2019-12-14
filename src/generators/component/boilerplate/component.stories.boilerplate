@@ -1,0 +1,7 @@
+import React from "react";
+import { storiesOf } from "@storybook/react";
+import COMPONENT from "./COMPONENT";
+
+const stories = storiesOf("COMPONENT", module);
+
+stories.add("COMPONENT", (): JSX.Element => <COMPONENT />);

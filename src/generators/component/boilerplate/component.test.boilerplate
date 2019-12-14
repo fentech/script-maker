@@ -1,0 +1,9 @@
+import React from "react";
+import COMPONENT from "./COMPONENT";
+import { render, fireEvent, cleanup } from "@testing-library/react";
+
+const TEST_ID = "COMPONENT";
+
+describe("COMPONENT", (): void => {
+  afterEach(cleanup);
+});
