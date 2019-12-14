@@ -1,4 +1,4 @@
-import { compose } from '../compose/compose';
+import compose from '../compose/compose';
 
 const log = (string: string, ...formatters: LoggingFormatter[]): void => {
     let toLog = string;

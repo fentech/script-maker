@@ -1,6 +1,6 @@
 import warn from './warn';
 import { boldConsoleText, redConsoleText } from '../consoleFormat/consoleFormat';
-import { compose } from '../compose/compose';
+import compose from '../compose/compose';
 
 // jest.mock('../log/log');
 

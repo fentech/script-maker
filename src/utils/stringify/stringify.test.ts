@@ -1,13 +1,9 @@
-import stringify from "./stringify";
+import stringify from './stringify';
 
-describe("stringify", (): void => {
-  it("should returns a stringified object with escaped quotes", (): void => {
-    const testObj = {
-      test: "test"
-    };
+describe('stringify', (): void => {
+    it('should returns a stringified object with escaped quotes', (): void => {
+        const string = 'test';
 
-    expect(stringify(testObj)).toEqual(
-      JSON.stringify(testObj).replace(/("|')/gm, `\$1`)
-    );
-  });
+        expect(stringify(string)).toEqual(JSON.stringify(string).replace(/("|')/gm, `\$1`));
+    });
 });
