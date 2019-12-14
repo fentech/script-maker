@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import fs from 'fs';
 
-const executeUnlessExists = (assetPathToCheck: string, callback: () => void): any => {
+const executeUnlessFileExists = (assetPathToCheck: string, callback: () => void): any => {
     if (!fs.existsSync(assetPathToCheck)) return callback();
 };
 
-export default executeUnlessExists;
+export default executeUnlessFileExists;
